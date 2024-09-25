@@ -50,5 +50,16 @@ public class Assignment2
         }
         return currentMin;
     }
+    // Method to find the differences between the average of the array with every element of the array.
+    public double[] AverageDifference(Double average, int[] array ){
+    double[] averageDifference;
+    double diference = 0;
+    for ( int i = 0; i < array.length; i++ ){
+            diference = array[i] * 1.0 - average; // Casting the integer array to double
+            averageDifference[i] =  diference;       
+        }
+        return averageDifference;
+    }    
+    
 
 }
