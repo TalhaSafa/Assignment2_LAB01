@@ -50,6 +50,13 @@ public class Assignment2
         }
         return currentMin;
     }
+    public int sumOfOddNumberIndex(int[] arr){
+        int sum = 0;
+        for(int i = 1; i < arr.length; i = i + 2){
+            sum += arr[i];
+        }
+        return sum;
+    }
     // Method to find the differences between the average of the array with every element of the array.
     public double[] AverageDifference(Double average, int[] array ){
     double[] averageDifference;
