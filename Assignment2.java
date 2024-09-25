@@ -52,7 +52,7 @@ public class Assignment2
     }
     public int sumOfOddNumberIndex(int[] arr){
         int sum = 0;
-        for(int i = 1; i < arr.length; i = i + 2){
+        for(int i = 1; i < arr.length -1; i = i + 2){
             sum += arr[i];
         }
         return sum;
