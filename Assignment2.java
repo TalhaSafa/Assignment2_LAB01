@@ -73,31 +73,45 @@ public class Assignment2
 
     public void displayMenu (  int [] Array ){
         Scanner scan = new Scanner(System.in);
-        int choice =-1;
-        while(choice != 4){
-            
+        System.out.println("Determine size of the Array between 1-100: ");
 
-            System.out.println("------------------- MENU -------------------");
-            System.out.println("1-Find the minimum and the maximum of the array.");
-            System.out.println("2-Find the average of the array.");
-            System.out.println("3-Find the sum of elements with odd- and even-numbered indexes.");
-            System.out.println("4-Type 4 to Exit.");
-            
-            choice = scan.nextInt();
-            if(choice == 1){
-                //caganın method,  Array.method
+        int theSize = nextInt();
+        if(nextInt()< 100 && 0 < nextInt()){
+             
+            int [] array_1 = createRandomArray(theSize);
+
+            int choice =-1;
+            while(choice != 4){
+                
+    
+                System.out.println("------------------- MENU -------------------");
+                System.out.println("1-Find the minimum and the maximum of the array.");
+                System.out.println("2-Find the average of the array.");
+                System.out.println("3-Find the sum of elements with odd- and even-numbered indexes.");
+                System.out.println("4-Type 4 to Exit.");
+                
+                choice = scan.nextInt();
+                if(choice == 1){
+                    System.out.println("The minimum value of the Array: " + findMin(array_1));
+                    System.out.println("The maximum value of the Array: "+ findMax(array_1) );
+                }
+                if(choice == 2){
+                   System.out.println("The sum of elements with odd- and even-numbered indexes: " + sumOfOddNumberIndex(array_1)); 
+                }
+                if(choice == 3){
+                    System.out.println();
+                }
+                if(choice == 4){
+                    System.out.println("Exiting the simulator.");
+                    break;
+                }
+    
             }
-            if(choice == 2){
-                //find the avarage 
-            }
-            if(choice == 3){
-                //find the sum of all
-            }
-            if(choice == 4){
-                System.out.println("Exiting the simulator.");
-                break;
-            }
+        }
+        else{
+            System.out.println("Please enter an integer between 1-100: ");
 
         }
+      
     }
 }
