@@ -61,4 +61,17 @@ public class Assignment2
         return averageDifference;
 
     }
+
+    // method to find the sum of integers at even indexes
+    public double findEvenIndex(int[] array)
+    {
+        double sum = 0;
+
+        for(int i = 0; i < array.length-1; i = i + 2)
+        {
+            sum += array[i];
+        }
+
+        return sum;
+    }
 }
