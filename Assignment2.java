@@ -52,14 +52,14 @@ public class Assignment2
     }
     public int sumOfOddNumberIndex(int[] arr){
         int sum = 0;
-        for(int i = 1; i < arr.length; i = i + 2){
+        for(int i = 1; i < arr.length -1; i = i + 2){
             sum += arr[i];
         }
         return sum;
     }
     // Method to find the differences between the average of the array with every element of the array.
     public double[] AverageDifference(Double average, int[] array ){
-    double[] averageDifference;
+    double[] averageDifference= new double[array.length];
     double diference = 0;
     for ( int i = 0; i < array.length; i++ ){
             diference = array[i] * 1.0 - average; // Casting the integer array to double
@@ -113,5 +113,18 @@ public class Assignment2
 
         }
       
+    }
+
+    // method to find the sum of integers at even indexes
+    public double findEvenIndex(int[] array)
+    {
+        double sum = 0;
+
+        for(int i = 0; i < array.length-1; i = i + 2)
+        {
+            sum += array[i];
+        }
+
+        return sum;
     }
 }
