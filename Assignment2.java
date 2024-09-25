@@ -2,7 +2,6 @@ import java.util.Random;
 
 public class Assignment2
 {
-<<<<<<< HEAD
     public static int[] createRandomArray(int size)
     {
         Random ran = new Random(); 
@@ -25,8 +24,8 @@ public class Assignment2
         }
 
         return (double) sum / array.length;
-=======
-    
+    }
+
     //Method to find the max value in the array
     public int findMax(int[] array){
         int size = array.length;
@@ -49,6 +48,5 @@ public class Assignment2
             }
         }
         return currentMin;
->>>>>>> origin/main
     }
 }
